@@ -1,14 +1,10 @@
 import React from 'react';
-import { Button, GlobalStyle } from './style'
+import Header from './commons/header'
 
 
 function App() {
   return (
-    <div>
-      hello
-      <Button>helloBtn</Button>
-      <GlobalStyle />
-    </div>
+    <Header/>
   );
 }
 
