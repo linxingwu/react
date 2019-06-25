@@ -19,10 +19,12 @@ export const Container = styled("div")`
     line-height: 30px;
     text-align: center;
     border-radius: 50%;
-    background: #969696;
     position: relative;
     right: 32px;
     top: 2px;
+  }
+  .bg_active{
+    background: #969696;
   }
 `;
 export const Item = styled("div")`
@@ -51,6 +53,24 @@ export const Search = styled("input")`
   margin-left: 15px;
   background: #eee;
   outline: none;
+  &.slide-enter{
+    transition: all .3s ease-out ;
+  }
+  &.slide-enter-active{
+    width: 300px;
+  }
+  &.slide-enter-done{
+    width: 300px;
+  }
+  &.slide-exit{
+    transition: all .3s ease-in ;
+  }
+  &.slide-exit-active{
+    width: 178px;
+  }
+  &.slide-exit-done{
+    width: 178px;
+  }
 `;
 
 export const NavBar = styled("div")`

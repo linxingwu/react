@@ -10,8 +10,16 @@ import {
     Item,
     Search
 } from './style'
+import {CSSTransition} from 'react-transition-group'
 
 class Header extends Component{
+    constructor(props){
+        super(props);
+        this.state={
+            focused:false
+        }
+    }
+
     render(){
         return (
             <UnderLine>
@@ -36,8 +44,18 @@ class Header extends Component{
                             <i className="iconfont">&#xe601;</i>
                             下载App
                         </Item>
-                        <Search placeholder={"搜索"}/>
-                        <i className="iconfont left">&#xe662;</i>
+                        <CSSTransition
+                            in={this.state.focused}
+                            timeout={300}
+                            classNames={"slide"}
+                        >
+                            <Search placeholder={"搜索"}
+                                    className={this.state.focused ? "active" : ""}
+                                    onFocus={()=>{this.setState({focused:true})}}
+                                    onBlur={()=>{this.setState({focused:false})}}
+                            />
+                        </CSSTransition>
+                        <i className={this.state.focused?"iconfont left bg_active":"iconfont left"}>&#xe662;</i>
                     </Container>
                 </NavBar>
             </UnderLine>
