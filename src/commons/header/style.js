@@ -7,11 +7,13 @@ export const UnderLine = styled("div")`
     border-bottom: 1px solid #f0f0f0;
 `;
 export const Container = styled("div")`
-    position: relative;
-    width: 945px;
+    /* position: relative; */
+    /* width: 945px; */
+    float: left;
     height: 58px;
-    top: -53px;
+    /* top: -53px;  */
     margin-left: 220px;
+
   .left{
     display: inline-block;
     width: 30px;
@@ -78,27 +80,26 @@ export const NavBar = styled("div")`
 	margin: 0 auto;
 `;
 export const Beta = styled("div")`
+  float: right;
   display: inline-block;
   width: 56px;
   height: 25px;
   background-image: url(${beatPic});
   background-size: contain;
-  float: right;
   margin: 15px 12px 0
 `;
-export const  Aa= styled("div")`
+export const Aa = styled("div")`
+  float: right;
  display: inline-block;
  width: 24px;
  height: 20px;
  line-height: 20px;
- float: right;
  padding: 17px 10px;
 `;
 export const ABtn = styled("a")`
     display: inline-block;
     float: right;
     text-align: center;
-    /*box-sizing: border-box;*/
     &.writing{
         width:74px;
         height: 26px;
@@ -110,7 +111,6 @@ export const ABtn = styled("a")`
         border-radius: 20px
      }
     &.signUp{
-        /*box-sizing: border-box;*/
         width:54px;
         height: 24px;
         line-height: 24px;
@@ -132,9 +132,18 @@ export const ABtn = styled("a")`
 `
 
 export const Icon = styled("a")`
+  float: left;
 	display: inline-block;
 	width: 100px;
 	height: 56px;
 	background-image: url(${logoPic});
 	background-size: contain;
 `
+
+export const HotSearch = styled('div')`
+  float: left;
+  width: 250px;
+  height: 159px;
+  background-color: pink;
+  box-shadow: 0 0 8px rgba(0,0,0,.2)
+`;

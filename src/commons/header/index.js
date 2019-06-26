@@ -8,7 +8,8 @@ import {
     Aa,
     Container,
     Item,
-    Search
+    Search,
+    HotSearch
 } from './style'
 import {CSSTransition} from 'react-transition-group'
 import {connect} from 'react-redux'
@@ -49,6 +50,7 @@ const Header = (props)=>{
                     </CSSTransition>
                     <i className={props.focused?"iconfont left bg_active":"iconfont left"}>&#xe662;</i>
                 </Container>
+                <HotSearch>热门搜索</HotSearch>
             </NavBar>
         </UnderLine>
     )
