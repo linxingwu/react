@@ -3,7 +3,7 @@ import Header from './commons/header'
 import {GlobalStyle} from './style'
 import {GlobalFont} from './statics/iconfont/iconfont'
 import { Provider } from 'react-redux'
-import store from './commons/header/store'
+import store from './store'
 
 function App() {
   return (

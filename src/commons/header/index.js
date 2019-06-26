@@ -12,7 +12,7 @@ import {
 } from './style'
 import {CSSTransition} from 'react-transition-group'
 import {connect} from 'react-redux'
-import {searchFocus,searchBlur} from './store/actionCreator'
+import {actionCreator} from './store'
 const Header = (props)=>{
     return (
         <UnderLine>
@@ -56,16 +56,16 @@ const Header = (props)=>{
 
 const stateToProps=(state)=>{
     return {
-        focused:state.focused
+        focused:state.header.focused
     }
 }
 const dispatchToProps = (dispatch)=>{
     return {
         handleFocusd:()=>{
-            dispatch(searchFocus())
+            dispatch(actionCreator.searchFocus())
         },
         handleBlured:()=>{
-            dispatch(searchBlur())
+            dispatch(actionCreator.searchBlur())
         }
     }
 }

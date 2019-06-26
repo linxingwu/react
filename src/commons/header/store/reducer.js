@@ -1,13 +1,12 @@
-import { combineReducers } from 'redux'
-import { SEARCHFOCUSED, SEARCHBLURD } from './headerAction'
+import * as consts from './headerAction'
 
 const inputFocus = (state = { focused: false }, action)=> {
     const newState = JSON.parse(JSON.stringify(state));
     switch (action.type) {
-        case SEARCHFOCUSED:
+        case consts.SEARCHFOCUSED:
             newState.focused = true;
             break;
-        case SEARCHBLURD:
+        case consts.SEARCHBLURD:
             newState.focused = false;
             break;
         default :

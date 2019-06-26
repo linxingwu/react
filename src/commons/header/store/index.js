@@ -1,6 +1,4 @@
-import { createStore } from 'redux'
-import headerData from './reducer'
+import headerData  from './reducer'
+import  * as actionCreator from './actionCreator'
 
-const store = createStore(headerData)
-
-export default store;
+export {headerData,actionCreator}
