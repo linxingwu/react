@@ -1,18 +1,19 @@
 import * as consts from './headerAction'
+import {fromJS} from 'immutable'
+const defaultState = fromJS({ focused: false });
 
-const inputFocus = (state = { focused: false }, action)=> {
-    const newState = JSON.parse(JSON.stringify(state));
+const inputFocus = (state = defaultState, action)=> {
     switch (action.type) {
         case consts.SEARCHFOCUSED:
-            newState.focused = true;
+            state = state.set("focused",true)
             break;
         case consts.SEARCHBLURD:
-            newState.focused = false;
+            state = state.set("focused",false)
             break;
         default :
-            newState.focused = false;
+            state = defaultState
     }
-    return newState;
+    return state;
 }
 
 const headerData = (state, action) => {
